@@ -1,7 +1,29 @@
 import { Component } from "react";
 import CartItem from "../cart/CartItem";
+import Paypal from "../pay/PayPal";
 
 export default class Checkout extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            payment: false
+        }
+    }
+
+    paypalPay = () => {
+        this.setState({
+            payment: true
+        })
+    }
+
+    paymentOnDelivery = () => {
+        this.setState({
+            payment: false
+        })
+    }
+
+
     render() {
         return (
             <div className="container">
@@ -74,12 +96,13 @@ export default class Checkout extends Component {
                             </div>
                         </div>
                         <hr />
-                        <h3>Phương thức thanh</h3>
-                        <div className="row p-3">
+                        <h3>Phương thức thanh toán</h3>
+                        <div className="row">
                             <div className="col">
-                                <div className="btn btn-outline-dark mx-1">Ví điện tử</div>
-                                <div className="btn btn-outline-dark mx-1">
-                                    Thanh toán khi nhận hàng
+                                <button className="btn btn-outline-dark me-3" onClick={this.paypalPay}>Ví điện tử</button>
+                                <button className="btn btn-outline-dark" onClick={this.paymentOnDelivery}>Thanh toán khi nhận hàng</button>
+                                <div className="mt-3">
+                                    {this.state.payment ? <Paypal/> : ""}
                                 </div>
                             </div>
                         </div>
