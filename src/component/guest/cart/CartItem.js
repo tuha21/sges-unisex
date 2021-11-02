@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class CartItem extends Component {
     render() {
@@ -18,11 +18,13 @@ export default class CartItem extends Component {
                 </td>
                 <td>200.000</td>
                 <td>
-                    <input type="number"/>
+                    <input type="number" name="" id="" />
                 </td>
                 <td>200.000</td>
-                <td><i class="bi bi-trash"></i></td>
+                <td>
+                    <i class="bi bi-trash"></i>
+                </td>
             </tr>
-        )
+        );
     }
 }

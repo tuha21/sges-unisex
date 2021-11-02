@@ -8,7 +8,7 @@
     height: 40px;
     line-height: 40px;
     background-color: #222222;
-    color: #B2B2AD;
+    color: #b2b2ad;
     font-size: 12px;
 
     .top-bar-right-item {
@@ -18,11 +18,11 @@
     }
 
     a {
-        color: #B2B2AD;
+        color: #b2b2ad;
         text-decoration: none;
 
         &:hover {
-            color: #6570DA;
+            color: #6570da;
         }
     }
 }
@@ -32,8 +32,6 @@
     line-height: 90px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-bottom: 50px;
-
-
 
     .left-menu {
         height: 90px;
@@ -71,6 +69,8 @@
         span {
             cursor: pointer;
             margin-left: 20px;
+            font-size: larger;
+            padding-left: 5px;
             a {
                 color: #222;
             }
@@ -84,7 +84,7 @@
 
         .category-item {
             height: 350px;
-            border: 1px solid #E6E6E6;
+            border: 1px solid #e6e6e6;
 
             &:hover {
                 cursor: pointer;
@@ -123,7 +123,7 @@
             margin-bottom: 10px;
 
             a {
-                color: #E6E6E6;
+                color: #e6e6e6;
                 text-decoration: none;
             }
         }
@@ -141,7 +141,6 @@
 }
 
 .product-overview {
-
     h2 {
         font-weight: bold;
     }
@@ -149,13 +148,13 @@
     .product-filter {
         .content-filter {
             margin-top: 20px;
-            background-color: #E6E6E6;
+            background-color: #e6e6e6;
             padding: 20px;
         }
 
         .product-overview-filter {
             .content {
-                background-color: #E6E6E6;
+                background-color: #e6e6e6;
             }
 
             p {
@@ -169,7 +168,7 @@
                 li {
                     a {
                         text-decoration: none;
-                        color: #B2B2AD;
+                        color: #b2b2ad;
                     }
                 }
             }
@@ -191,7 +190,7 @@
                     a {
                         text-decoration: none;
                         cursor: pointer;
-                        color: #B2B2AD;
+                        color: #b2b2ad;
 
                         &:hover {
                             text-decoration: underline;
@@ -238,7 +237,7 @@
 
             .product-info {
                 a {
-                    color: #B2B2AD;
+                    color: #b2b2ad;
                     cursor: pointer;
                     text-decoration: none;
                 }
@@ -249,7 +248,7 @@
 
 .product-detail {
     .breadcrumb {
-        color: #B2B2AD;
+        color: #b2b2ad;
     }
 
     .list-small-image {
@@ -261,14 +260,13 @@
     }
 
     button {
-        background-color: #84746B;
+        background-color: #84746b;
         border: none;
         border-radius: 0px;
         padding: 10px;
     }
 
     form {
-
         input,
         select {
             border-radius: 0px;
@@ -276,9 +274,24 @@
     }
 }
 
+.cart-item {
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    input {
+        border: 1px solid #b2b2ad;
+        border-radius: 0px;
+        outline: none;
+        width: 100px;
+    }
+}
+
 .cart {
     .breadcrumb {
-        color: #B2B2AD;
+        color: #b2b2ad;
     }
 
     .cart-item {
@@ -289,7 +302,7 @@
         }
 
         input {
-            border: 1px solid #B2B2AD;
+            border: 1px solid #b2b2ad;
             border-radius: 0px;
             outline: none;
             width: 100px;
@@ -297,21 +310,21 @@
     }
 
     .voucher-input {
-        border: 1px solid #B2B2AD;
+        border: 1px solid #b2b2ad;
         border-radius: 0px;
         outline: none;
         width: 200px;
         padding: 10px;
     }
     .apply-voucher {
-        background-color: #B2B2AD;
-        border: 1px solid #B2B2AD;
+        background-color: #b2b2ad;
+        border: 1px solid #b2b2ad;
         border-radius: 0px;
         padding: 10px;
     }
 
     .cart-total {
-        border: 1px solid #E6E6E6;
+        border: 1px solid #e6e6e6;
         padding: 30px;
         button {
             width: 100%;
@@ -323,7 +336,7 @@
 
 .login-page {
     padding: 30px 0px 30px 0px;
-    background: #F7F7F7;
+    background: #f7f7f7;
 
     .login-content {
         padding: 20px;
@@ -365,7 +378,7 @@
                     align-items: center;
                     margin-bottom: 30px;
                     border: none;
-                    background-color: #E14B33;
+                    background-color: #e14b33;
                     color: #fff;
 
                     i {
@@ -379,7 +392,7 @@
                     align-items: center;
                     margin-bottom: 30px;
                     border: none;
-                    background-color: #3B5998;
+                    background-color: #3b5998;
                     color: #fff;
 
                     i {
@@ -393,14 +406,14 @@
                 height: 38px;
                 padding: 0px 20px 0px 20px;
                 line-height: 34px;
-                border: 1px solid #E1E1E1;
+                border: 1px solid #e1e1e1;
                 outline: none;
             }
 
             .btn-login {
                 width: 100%;
                 height: 50px;
-                background-color: #E14B33;
+                background-color: #e14b33;
                 color: #fff;
                 border: none;
                 border-radius: 25px;
