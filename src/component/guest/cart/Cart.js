@@ -1,9 +1,27 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 
-export default class Cart extends Component {
+class Cart extends Component {
+
+    componentDidMount = () => {
+
+    }
+
+    total = (cart) => {
+        let total = 0;
+        cart.forEach(element => {
+           total = total + ((100 - element.sale) * element.price/100)* element.qty 
+        });
+        return total
+    }
+
     render() {
+        const element = this.props.cart.map((val, ind) => {
+            return <CartItem key={ind} cartItem={val}></CartItem>
+        })
+        
         return (
             <div className="cart">
                 <div className="container">
@@ -21,10 +39,7 @@ export default class Cart extends Component {
                                     </tr>
                                 </tbody>
                                 <tbody>
-                                    <CartItem />
-                                    <CartItem />
-                                    <CartItem />
-                                    <CartItem />
+                                    {element}
                                     <tr>
                                         <td colSpan={5}>
                                             <input
@@ -51,7 +66,7 @@ export default class Cart extends Component {
                                     <h>Shipping: 30.000 đ</h>
                                 </p>
                                 <p>
-                                    <h5>TOTALS: 330.000 đ</h5>
+                                    <h5>TOTAL: {this.total(this.props.cart) + 30000} đ</h5>
                                 </p>
                                 <Link to="checkout">
                                     <button>Check out</button>
@@ -64,3 +79,21 @@ export default class Cart extends Component {
         );
     }
 }
+const mapStateToDispatch = dispatch => {
+    return {
+        setProductInfo: product => {
+            dispatch({
+                type: 'set',
+                product
+            })
+        }
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        cart: state.cart
+    }
+}
+
+export default connect(mapStateToProps, mapStateToDispatch)(Cart)

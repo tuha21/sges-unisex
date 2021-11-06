@@ -1,8 +1,9 @@
 import { Component } from "react";
+import { connect } from "react-redux";
 import CartItem from "../cart/CartItem";
 import Paypal from "../pay/PayPal";
 
-export default class Checkout extends Component {
+class Checkout extends Component {
 
     constructor(props) {
         super(props);
@@ -22,9 +23,18 @@ export default class Checkout extends Component {
             payment: false
         })
     }
+    
+    total = (cart) => {
+        let total = 0;
+        cart.forEach(element => {
+           total = total + ((100 - element.sale) * element.price/100)* element.qty 
+        });
+        return total
+    }
 
 
     render() {
+        const totalPay = this.total(this.props.cart) + 30000
         return (
             <div className="container">
                 <div className="row">
@@ -102,7 +112,7 @@ export default class Checkout extends Component {
                                 <button className="btn btn-outline-dark me-3" onClick={this.paypalPay}>Ví điện tử</button>
                                 <button className="btn btn-outline-dark" onClick={this.paymentOnDelivery}>Thanh toán khi nhận hàng</button>
                                 <div className="mt-3">
-                                    {this.state.payment ? <Paypal/> : ""}
+                                    {this.state.payment ? <Paypal totalPay={totalPay}/> : ""}
                                 </div>
                             </div>
                         </div>
@@ -131,3 +141,23 @@ export default class Checkout extends Component {
         );
     }
 }
+
+
+const mapStateToDispatch = dispatch => {
+    return {
+        setProductInfo: product => {
+            dispatch({
+                type: 'set',
+                product
+            })
+        }
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        cart: state.cart
+    }
+}
+
+export default connect(mapStateToProps, mapStateToDispatch)(Checkout)

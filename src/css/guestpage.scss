@@ -71,6 +71,7 @@
             margin-left: 20px;
             font-size: larger;
             padding-left: 5px;
+
             a {
                 color: #222;
             }
@@ -79,29 +80,31 @@
 }
 
 .home {
-    .category {
-        padding-top: 50px;
+    
+}
 
-        .category-item {
-            height: 350px;
-            border: 1px solid #e6e6e6;
+.category {
+    padding-top: 50px;
 
-            &:hover {
-                cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-            }
+    .category-item {
+        height: 350px;
+        border: 1px solid #e6e6e6;
 
-            p {
-                text-align: center;
-                font-size: 28px;
-                font-weight: bold;
-            }
+        &:hover {
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
 
-            img {
-                width: 100%;
-                height: 250px;
-                object-fit: cover;
-            }
+        p {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
     }
 }
@@ -244,6 +247,118 @@
             }
         }
     }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .items-list {
+        max-width: 90vw;
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 3rem;
+        justify-content: center;
+        align-content: center;
+
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .item {
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--greyDark);
+        cursor: pointer;
+
+        span {
+            background: #ffffff;
+            box-shadow: 0 0.8rem 2rem rgba(#5a6181, 0.05);
+            border-radius: 0.6rem;
+            padding: 2rem;
+            font-size: 3rem;
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            span {
+                transform: scale(1.2);
+                color: var(--primary);
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: var(--greyLight);
+        }
+    }
+
+    .page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5rem;
+        margin: 3rem;
+        border-radius: 0.6rem;
+        background: #ffffff;
+        box-shadow: 0 0.8rem 2rem rgba(#5a6181, 0.05);
+
+        &__numbers,
+        &__btn,
+        &__dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.8rem;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        &__dots {
+            width: 2.6rem;
+            height: 2.6rem;
+            color: var(--greyLight);
+            cursor: initial;
+        }
+
+        &__numbers {
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 0.4rem;
+
+            &:hover {
+                color: var(--primary);
+            }
+
+            &.active {
+                color: #ffffff;
+                background: var(--primary);
+                font-weight: 600;
+                border: 1px solid var(--primary);
+            }
+        }
+
+        &__btn {
+            color: var(--greyLight);
+            pointer-events: none;
+
+            &.active {
+                color: var(--greyDark);
+                pointer-events: initial;
+
+                &:hover {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+
 }
 
 .product-detail {
@@ -267,6 +382,7 @@
     }
 
     form {
+
         input,
         select {
             border-radius: 0px;
@@ -316,6 +432,7 @@
         width: 200px;
         padding: 10px;
     }
+
     .apply-voucher {
         background-color: #b2b2ad;
         border: 1px solid #b2b2ad;
@@ -326,6 +443,7 @@
     .cart-total {
         border: 1px solid #e6e6e6;
         padding: 30px;
+
         button {
             width: 100%;
             padding: 10px;
@@ -385,6 +503,7 @@
                         margin-right: 5px;
                     }
                 }
+
                 .btn-login-facebook {
                     width: 100%;
                     height: 38px;
@@ -419,5 +538,13 @@
                 border-radius: 25px;
             }
         }
+    }
+}
+
+.carousel-item {
+    img {
+        width: 100%;
+        height: 622px;
+        object-fit: cover;
     }
 }

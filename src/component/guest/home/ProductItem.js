@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-export default class ProductItem extends Component {
+class ProductItem extends Component {
+
+    setProductInfo = () => {
+        const {productItem} = this.props;
+        this.props.setProductInfo(productItem)
+    }
+
     render() {
+
+        const {productItem} = this.props
         return (
             <div className="product-item">
                 <img src="https://cf.shopee.vn/file/8fe6c485c0d9c6521a3ccd00d4201aa3" />
@@ -10,10 +19,10 @@ export default class ProductItem extends Component {
                     <button>Quick View</button>
                 </div>
                 <div className="product-info pt-2">
-                    <Link className="product-name" to="/product-detail">I am first product</Link>
+                    <Link className="product-name" to="/product-detail">{productItem.name}</Link>
                     <div className="row">
                         <div className="col-lg-10">
-                            <p className="product-price">$35.00</p>
+                            <p className="product-price">${productItem.price}</p>
                         </div>
                         <div className="col-lg-2">
                             <p className="product-price text-end"><i class="bi bi-heart"></i></p>
@@ -24,3 +33,22 @@ export default class ProductItem extends Component {
         )
     }
 }
+
+const mapStateToDispatch = dispatch => {
+    return {
+        setProductInfo: product => {
+            dispatch({
+                type: 'set',
+                product
+            })
+        }
+    }
+}
+
+const mapStateToProps = state => {
+    return {
+        
+    }
+}
+
+export default connect(mapStateToProps, mapStateToDispatch)(ProductItem)
