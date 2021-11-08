@@ -9,7 +9,7 @@ import Checkout from "./component/guest/home/Checkout";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Sges from "./component/guest/Sges";
 import AdminPage from "./component/admin/AdminPage";
-
+import './css/guestpage/guestpage.css'
 export default class App extends Component {
     render() {
         return (

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default class TopBar extends Component {
     render() {
         return (
-            <div className="top-bar">
+            <div className="top-bar-guest">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-8">
