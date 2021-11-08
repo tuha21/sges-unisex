@@ -1,0 +1,12 @@
+.content {
+  background-color: aqua;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-left: 240px;
+}
+/*# sourceMappingURL=adminpage.css.map */

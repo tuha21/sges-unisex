@@ -1,0 +1,110 @@
+@media screen and (max-width: 992px) {
+    .sider-bar {
+        display: none;
+    }
+}
+
+.sider-bar {
+    width: 240px;
+    height: 52px;
+}
+
+.sider-bar .logo {
+    width: 240px;
+    position: fixed;
+    top: 0px;
+    height: 52px;
+    line-height: 20px;
+    background-color: #068cc1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    .span2 {
+        background-color: #fff;
+        color: #3d464d;
+    }
+}
+
+.sider-bar .logo span {
+    color: #3d464d;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sider-bar .menu {
+    width: 240px;
+    height: 100%;
+    padding-top: 20px;
+    overflow-y: auto;
+    background: #08283d;
+    color: white;
+    position: fixed;
+    top: 52px;
+    -webkit-box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
+        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.sider-bar .menu .menu-sub-title {
+    color: #8398a2;
+    margin: 0px;
+    padding-left: 32px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.sider-bar .menu .menu-sub-list {
+    list-style: none;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #363d44;
+}
+
+.sider-bar .menu .menu-sub-list li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.sider-bar .menu .menu-sub-list li .link {
+    text-decoration: none;
+    color: white;
+    // border: 1px solid;
+}
+
+.sider-bar .menu .menu-sub-list li .link:hover {
+    color: #ffd333;
+}
+
+.sider-bar .menu .menu-sub-list li i {
+    width: 10px;
+    margin-right: 20px;
+}
+
+/* width */
+*::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background: #e7e7e7;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #cfcfcf;
+}
+
+/*# sourceMappingURL=siderbar.css.map */
