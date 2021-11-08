@@ -17,7 +17,7 @@ const CategoryList = () => {
                 <td style={{ width: "10%" }}>test</td>
                 <td style={{ width: "10%" }}>test</td>
                 <td style={{ width: "6%" }}>
-                    <Link className="btn btn-search" to="/admin/categories">
+                    <Link className="btn btn-dark" to="/admin/category">
                         Edit
                     </Link>
                 </td>
@@ -44,7 +44,7 @@ const CategoryList = () => {
                             <h3 className="m-0">Categories</h3>
                         </div>
                         <div className="col-auto d-flex">
-                            <Link className="btn" to="/admin/categorieslist">
+                            <Link className="btn" to="/admin/category">
                                 New Category
                             </Link>
                         </div>
