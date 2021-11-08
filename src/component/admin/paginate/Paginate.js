@@ -20,7 +20,7 @@ const onChangePageSize = (event: any) => {
 
 const Paginate = () => {
     return (
-        <div className="footer">
+        <div className="paginate-footer">
             <div className="pagination row d-flex align-items-center">
                 <div className="col">
                     Showing 1 to 10 of 13 Rows per page

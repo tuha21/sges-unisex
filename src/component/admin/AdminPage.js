@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import SideBar from "./layout/SideBar";
 import TopBar from "./layout/TopBar";
 import "../../css/adminpage/adminpage.css";
-import CategoryList from "./category/CategoryList";
+import CategoryList from "./catalog/category/CategoryList";
 
 const AdminPage = () => {
     return (

@@ -2,8 +2,8 @@ import React, { Component } from "react";
 // import CategoryItem from "./CategoryItem";
 // import Paginate from "./Paginate";
 import { Link } from "react-router-dom";
-import "../../../css/category/category.css";
-import Paginate from "../paginate/Paginate";
+import "../../../../css/category/category.css";
+import Paginate from "../../paginate/Paginate";
 // import BreadCrumb from "./BreadCrumb";
 
 const CategoryList = () => {
@@ -17,7 +17,7 @@ const CategoryList = () => {
                 <td style={{ width: "10%" }}>test</td>
                 <td style={{ width: "10%" }}>test</td>
                 <td style={{ width: "6%" }}>
-                    <Link className="btn" to="/admin/categories">
+                    <Link className="btn btn-search" to="/admin/categories">
                         Edit
                     </Link>
                 </td>

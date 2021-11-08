@@ -16,100 +16,108 @@ const SideBar = () => {
             </div>
             <div className="menu">
                 <div className="catalog">
-                    <p className="menu-sub-title">APPLICATION</p>
+                    <p className="menu-sub-title">Application</p>
                     <ul className="menu-sub-list">
                         <li>
                             <Link className="link" to="/admin">
-                                <i className="fas fa-tachometer-alt"></i>Dashboard
+                                <i className="fas fa-tachometer-alt first-icon"></i>
+                                <span>Dashboard</span>
                             </Link>
                         </li>
                         <li>
-                            <Link className="link btn" to="/admin/#">
-                                <i class="fas fa-database"></i>Catalog
+                            <Link className="link" to="/admin/#">
+                                <i className="fas fa-database first-icon"></i>
+                                <span>Catalog</span>
+                                <i className="fas fa-angle-left last-icon"></i>
                             </Link>
-                            <i class="fas fa-angle-down"></i>
-                            <ul style={{ display: "block" }}>
+                            {/* <i class="fas fa-angle-down"></i> */}
+                            <ul className="menu-sub-list-2" style={{ display: "block" }}>
                                 <li>
-                                    <Link className="link btn" to="/admin/productslist">
-                                        Products List
+                                    <Link className="link" to="/admin/productslist">
+                                        <span>Products List</span>
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="link btn" to="/admin/product">
-                                        Product
+                                    <Link className="link" to="/admin/product">
+                                        <span>Product</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link className="link" to="/admin/categorieslist">
-                                        Categories List
+                                        <span>Categories List</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link className="link" to="/admin/category">
-                                        Category
+                                        <span>Category</span>
                                     </Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <Link className="link" to="/admin/#">
-                                <i class="fas fa-user"></i>Customers
+                                <i class="fas fa-user first-icon"></i>
+                                <span>Customers</span>
                             </Link>
-                            <ul>
+                            <ul className="menu-sub-list-2" style={{ display: "block" }}>
                                 <li>
                                     <Link className="link" to="/admin/customerslist">
-                                        Customers List
+                                        <span>Customers List</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link className="link" to="/admin/customer">
-                                        Customer
+                                        <span>Customer</span>
                                     </Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <Link className="link" to="/admin/#">
-                                <i class="fas fa-shopping-cart"></i>Orders
+                                <i class="fas fa-shopping-cart first-icon"></i>
+                                <span>Orders</span>
                             </Link>
-                            <ul>
+                            <ul className="menu-sub-list-2" style={{ display: "block" }}>
                                 <li>
                                     <Link className="link" to="/adminorderslist">
-                                        Orders List
+                                        <span>Orders List</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link className="link" to="/admin/order">
-                                        Order Detail
+                                        <span>Order Detail</span>
                                     </Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <Link className="link" to="/admin/#">
-                                <i class="fas fa-calendar-check"></i>Event
+                                <i class="fas fa-calendar-check first-icon"></i>
+                                <span>Event</span>
                             </Link>
-                            <ul>
+                            <ul className="menu-sub-list-2" style={{ display: "block" }}>
                                 <li>
                                     <Link className="link" to="/admin/voucherslist">
-                                        Vouchers List
+                                        <span>Vouchers List</span>
                                     </Link>
                                 </li>
                                 <li>
                                     <Link className="link" to="/admin/voucher">
-                                        Voucher
+                                        <span>Voucher</span>
                                     </Link>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <Link className="link" to="/admin/inbox">
-                                <i class="fas fa-comments"></i>Inbox
+                                <i class="fas fa-comments first-icon"></i>
+                                <span>Inbox</span>
                             </Link>
                         </li>
                         <li>
                             <Link className="link" to="/admin/feedback">
-                                <i class="fas fa-envelope"></i>Feedback
+                                <i class="fas fa-envelope first-icon"></i>
+                                <span>Feedback</span>
                             </Link>
                         </li>
                     </ul>
