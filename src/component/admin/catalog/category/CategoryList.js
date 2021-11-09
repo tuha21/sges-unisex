@@ -2,7 +2,6 @@ import React, { Component } from "react";
 // import CategoryItem from "./CategoryItem";
 // import Paginate from "./Paginate";
 import { Link } from "react-router-dom";
-import "../../../../css/category/category.css";
 import Paginate from "../../paginate/Paginate";
 // import BreadCrumb from "./BreadCrumb";
 

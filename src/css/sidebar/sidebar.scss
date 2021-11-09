@@ -79,9 +79,9 @@
 .sider-bar .menu .menu-sub-list li a {
     color: inherit;
     display: flex;
-    font-size: 14px;
-    line-height: 18px;
-    padding: 7px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 20px;
     text-decoration: none;
     .first-icon {
         margin-right: 12px;
@@ -95,7 +95,8 @@
         color: #7a8f99;
     }
     &:hover {
-        background-color: #068cc1;
+        border-left: 3px solid #068cc1;
+        background-color: #0b3552;
     }
 }
 

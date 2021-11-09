@@ -1,12 +1,61 @@
-.main {
-    // display: flex;
-}
+// .main {
+//     // display: flex;
+// }
 
 .content {
-    background-color: aqua;
     display: flex;
     justify-content: center;
     position: relative;
     margin-left: 240px;
     // width: 100%;
+}
+
+.category-list {
+    width: 100%;
+    padding: 0 20px;
+    position: absolute;
+    .container {
+        .py-5 {
+            padding: 1.5rem 0 !important;
+            a {
+                color: #828f99;
+            }
+            .btn {
+                color: #fff;
+                background-color: #08283d;
+            }
+            .row {
+                margin-top: -16px;
+            }
+        }
+        .card {
+            input {
+                border: none;
+                background-color: #e6e8eb;
+            }
+        }
+    }
+}
+
+.pagination {
+    padding: 24px;
+    .pageSize {
+        padding: 5px;
+        margin-right: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: aliceblue;
+    }
+    .pageNumber {
+        button {
+            margin: 0 2px;
+            border-radius: 10px;
+            padding: 2px 15px;
+            border: none;
+        }
+        .btn-control {
+            color: aliceblue;
+            background-color: #08283d;
+        }
+    }
 }

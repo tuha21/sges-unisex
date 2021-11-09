@@ -4,7 +4,7 @@ import SideBar from "./layout/SideBar";
 import TopBar from "./layout/TopBar";
 import "../../css/adminpage/adminpage.css";
 import CategoryList from "./catalog/category/CategoryList";
-import Category from "./../guest/home/Category";
+import Category from "./catalog/category/Category";
 
 const AdminPage = () => {
     return (
@@ -13,9 +13,6 @@ const AdminPage = () => {
                 <SideBar />
                 <TopBar />
                 <div className="content">
-                    {/* <Route exact path="/">
-                        <Dashboard />
-                    </Route> */}
                     <Route path="/admin/categorieslist">
                         <CategoryList />
                     </Route>
