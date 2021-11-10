@@ -10,7 +10,7 @@ import * as VscIcons from "react-icons/vsc";
 
 export const SideBarData = [
     {
-        title: "Dasboard",
+        title: "Dashboard",
         path: "/admin/dashboard",
         icon: <AiIcons.AiOutlineDashboard />,
     },

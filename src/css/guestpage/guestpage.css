@@ -33,6 +33,7 @@
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   margin-bottom: 50px;
+  background-color: #fff;
 }
 
 .top-menu .left-menu {
@@ -85,6 +86,7 @@
 .category .category-item {
   height: 350px;
   border: 1px solid #e6e6e6;
+  background-color: #fff;
 }
 
 .category .category-item:hover {
@@ -451,6 +453,11 @@
   width: 100%;
   padding: 10px;
   border: none;
+}
+
+.cart .col-lg-8,
+.cart .col-lg-4 {
+  background-color: #fff;
 }
 
 .login-page {

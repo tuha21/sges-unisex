@@ -32,6 +32,7 @@
     line-height: 90px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     margin-bottom: 50px;
+    background-color: #fff;
 
     .left-menu {
         height: 90px;
@@ -79,16 +80,13 @@
     }
 }
 
-.home {
-    
-}
-
 .category {
     padding-top: 50px;
 
     .category-item {
         height: 350px;
         border: 1px solid #e6e6e6;
+        background-color: #fff;
 
         &:hover {
             cursor: pointer;
@@ -358,7 +356,6 @@
             }
         }
     }
-
 }
 
 .product-detail {
@@ -382,7 +379,6 @@
     }
 
     form {
-
         input,
         select {
             border-radius: 0px;
@@ -449,6 +445,10 @@
             padding: 10px;
             border: none;
         }
+    }
+    .col-lg-8,
+    .col-lg-4 {
+        background-color: #fff;
     }
 }
 

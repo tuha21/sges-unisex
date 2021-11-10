@@ -16,7 +16,7 @@ const CategoryList = () => {
                 <td style={{ width: "10%" }}>test</td>
                 <td style={{ width: "10%" }}>test</td>
                 <td style={{ width: "6%" }}>
-                    <Link className="btn btn-dark" to="/admin/category">
+                    <Link className="btn" to="/admin/category">
                         Edit
                     </Link>
                 </td>
@@ -25,7 +25,7 @@ const CategoryList = () => {
     };
 
     return (
-        <div className="category-list">
+        <div className="admin-category">
             <div className="container">
                 <div className="py-5">
                     <div className="row g-4 align-items-center">
@@ -33,10 +33,10 @@ const CategoryList = () => {
                             <nav className="mb-2" aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item">
-                                        <a href="/admin">Dashboard</a>
+                                        <a href="/admin">Admin</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
-                                        categories
+                                        Categories
                                     </li>
                                 </ol>
                             </nav>
@@ -49,16 +49,18 @@ const CategoryList = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card">
+                <div className="card container">
                     <div className="p-4">
-                        <div className="d-flex align-items-center">
-                            <input
-                                type="text"
-                                placeholder="Search"
-                                class="form-control form-control--search mx-auto"
-                                id="table-search"
-                            />
-                        </div>
+                        <form>
+                            <div className="form-group">
+                                <i className="fa fa-search" aria-hidden="true"></i>
+                                <input
+                                    id="name"
+                                    type="text"
+                                    placeholder="Tìm kiếm theo tên danh mục..."
+                                />
+                            </div>
+                        </form>
                     </div>
                     <div class="dropdown-divider"></div>
                     <table className="table">
