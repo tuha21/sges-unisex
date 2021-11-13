@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FilterData } from "./FilterData";
 import { ProductData } from "./ProductData";
+import Paginate from "./../../paginate/Paginate";
+import Header from "./Header";
+import { HeaderData } from "./HeaderData";
 
 const ProductList = () => {
     return (
@@ -34,11 +37,12 @@ const ProductList = () => {
                         <div className="col-2">
                             <div className="card">
                                 <div className="filter">
-                                    <span>Filter</span>
+                                    <span>Bộ lọc tìm kiếm</span>
                                 </div>
-                                <hr />
                                 <div className="p-3">
-                                    <span className="filter-by">Category</span>
+                                    <div className="filter-by">
+                                        <span>Danh mục</span>
+                                    </div>
                                     <div className="form-check py-1">
                                         <input
                                             className="form-check-input"
@@ -53,12 +57,14 @@ const ProductList = () => {
                                 </div>
                                 {FilterData.map((val, idx) => {
                                     return (
-                                        <div className="p-3">
+                                        <div className="px-3 py-2">
                                             <div className="dropdown-divider"></div>
-                                            <span className="filter-by">{val.title}</span>
+                                            <div className="filter-by">
+                                                <span>{val.title}</span>
+                                            </div>
                                             <form>
-                                                <div className="form-group d-flex align-items-center py-1">
-                                                    <label htmlFor={val.idf} className="col-3">
+                                                <div className="form-group d-flex align-items-center">
+                                                    <label htmlFor={val.idf} className="col-2">
                                                         Từ
                                                     </label>
                                                     <input
@@ -69,7 +75,7 @@ const ProductList = () => {
                                                     />
                                                 </div>
                                                 <div className="form-group d-flex align-items-center py-1">
-                                                    <label htmlFor={val.idf} className="col-3">
+                                                    <label htmlFor={val.idf} className="col-2">
                                                         Đến
                                                     </label>
                                                     <input
@@ -83,11 +89,14 @@ const ProductList = () => {
                                         </div>
                                     );
                                 })}
+                                <div className="filter-btn py-3 d-flex justify-content-center">
+                                    <div className="btn w-75">Áp dụng</div>
+                                </div>
                             </div>
                         </div>
                         <div className="col-10">
                             <div className="card p-2">
-                                <ul className="nav nav-tabs">
+                                <ul className="nav nav-tabs my-2 filter-status">
                                     <li className="nav-item">
                                         <a
                                             className="nav-link active"
@@ -128,19 +137,29 @@ const ProductList = () => {
                                                 type="text"
                                                 placeholder="Tìm kiếm theo tên sản phẩm..."
                                             />
+                                            <div className="btn d-flex align-items-center">
+                                                Tìm kiếm
+                                            </div>
                                         </div>
                                     </form>
-                                    <div className="px-3">
-                                        <table className="table table-striped">
+                                    <div className="p-3">
+                                        <table className="table table-striped table-borderless">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">Image</th>
-                                                    <th scope="col">Tên sản phẩm</th>
-                                                    <th scope="col">Phân loại</th>
-                                                    <th scope="col">Giá</th>
-                                                    <th scope="col">Giảm giá</th>
-                                                    <th scope="col">Kho hàng</th>
-                                                    <th scope="col">Lượt truy cập</th>
+                                                    <th className="px-3 text-center">
+                                                        <input type="checkbox" name="select-all" />
+                                                    </th>
+                                                    <th scope="col">
+                                                        <div
+                                                            className="btn"
+                                                            style={{ fontWeight: "500" }}
+                                                        >
+                                                            Image
+                                                        </div>
+                                                    </th>
+                                                    {HeaderData.map((value, index) => {
+                                                        return <Header item={value} key={index} />;
+                                                    })}
                                                     <th>Option</th>
                                                 </tr>
                                             </thead>
@@ -148,15 +167,23 @@ const ProductList = () => {
                                                 {ProductData.map((val, index) => {
                                                     return (
                                                         <tr key={index}>
-                                                            <td>{val.image}</td>
-                                                            <td>{val.name}</td>
-                                                            <td>{val.category}</td>
-                                                            <td>{val.price}</td>
-                                                            <td>{val.sale}</td>
-                                                            <td>{val.quantity}</td>
-                                                            <td>{val.view}</td>
+                                                            <td className="px-3 text-center">
+                                                                <input
+                                                                    className=""
+                                                                    type="checkbox"
+                                                                    name=""
+                                                                    id=""
+                                                                />
+                                                            </td>
+                                                            <td className="px-2">{val.image}</td>
+                                                            <td className="px-2">{val.name}</td>
+                                                            <td className="px-2">{val.category}</td>
+                                                            <td className="px-2">{val.price}</td>
+                                                            <td className="px-2">{val.sale}</td>
+                                                            <td className="px-2">{val.quantity}</td>
+                                                            <td className="px-2">{val.view}</td>
                                                             <td>
-                                                                <Link className="btn" to="#">
+                                                                <Link className="btn" to="product">
                                                                     Edit
                                                                 </Link>
                                                             </td>
@@ -167,6 +194,7 @@ const ProductList = () => {
                                         </table>
                                     </div>
                                 </div>
+                                <Paginate />
                             </div>
                         </div>
                     </div>

@@ -21,7 +21,7 @@ const Category = () => {
                                     </li>
                                 </ol>
                             </nav>
-                            <h3 className="m-0">Edit Category</h3>
+                            <h3 className="m-0">Category</h3>
                         </div>
                         <div className="col-auto d-flex">
                             <Link className="btn btn-xoa" to="/admin/category">

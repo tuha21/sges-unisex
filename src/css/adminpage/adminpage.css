@@ -13,9 +13,12 @@
   margin-left: 240px;
 }
 
+.breadcrumb a {
+  color: #828f99;
+}
+
 .admin-category {
   width: 100%;
-  padding: 0 20px;
 }
 
 .admin-category .container .py-5 {
@@ -86,6 +89,14 @@
   border-radius: 5px;
 }
 
+.admin-category .container .card .p-4 .form-group .btn {
+  position: absolute;
+  background-color: #068cc1;
+  right: 0;
+  color: #fff;
+  height: 40px;
+}
+
 .pagination {
   padding: 24px;
 }
@@ -112,7 +123,68 @@
 
 .admin-product {
   width: 100%;
-  padding: 0 20px;
+}
+
+.admin-product .card {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.admin-product .card .filter {
+  border-bottom: 1px solid #d9d9d9;
+  margin: 0;
+  padding: 16px;
+}
+
+.admin-product .card .filter-by {
+  width: 100%;
+  padding: 10px;
+}
+
+.admin-product .card form {
+  font-weight: 400;
+}
+
+.admin-product .card form input {
+  height: 30px;
+  line-height: 30px;
+}
+
+.admin-product .card .filter-btn .btn {
+  background-color: #068cc1;
+  color: #fff;
+}
+
+.admin-product .card .table {
+  line-height: 40px;
+}
+
+.admin-product .card .table .th-sort:hover {
+  background-color: #f0f2f5;
+}
+
+.admin-product .card .table .th-sort .btn {
+  width: 100%;
+}
+
+.admin-product .card .table .th-sort .btn span {
+  left: 0;
+  font-weight: 500;
+}
+
+.admin-product .card .table .th-sort .btn .sort {
+  display: -ms-grid;
+  display: grid;
+}
+
+.admin-product .card .table .th-sort .btn .sort svg {
+  height: 12px;
+}
+
+.admin-product .p-4 .btn {
+  margin-left: 10px;
+  color: #fff;
+  background-color: #068cc1;
 }
 
 .admin-product .card {
@@ -120,7 +192,11 @@
           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.admin-product .col-10 .card .p-2 .form-group {
+.admin-product .col-10 .card .p-2 form {
+  border: 1px solid #d9d9d9;
+}
+
+.admin-product .col-10 .card .p-2 form .form-group {
   position: relative;
   height: 40px;
   display: -webkit-box;
@@ -131,7 +207,7 @@
           align-items: center;
 }
 
-.admin-product .col-10 .card .p-2 .form-group i {
+.admin-product .col-10 .card .p-2 form .form-group i {
   position: absolute;
   background-color: #068cc1;
   color: #fff;
@@ -141,7 +217,7 @@
   border-radius: 5px 0 0 5px;
 }
 
-.admin-product .col-10 .card .p-2 .form-group input {
+.admin-product .col-10 .card .p-2 form .form-group input {
   line-height: 40px;
   height: 40px;
   width: 100%;
@@ -149,5 +225,13 @@
   border: none;
   background-color: #e6e8eb;
   border-radius: 5px;
+}
+
+.admin-product .col-10 .card .p-2 form .form-group .btn {
+  position: absolute;
+  background-color: #068cc1;
+  right: 0;
+  color: #fff;
+  height: 40px;
 }
 /*# sourceMappingURL=adminpage.css.map */

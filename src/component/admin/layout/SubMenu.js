@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const SubMenu = ({ item }) => {
     const [subNav, setSubNav] = useState(false);
     const showSubNav = () => {
+        console.log(subNav);
         setSubNav(!subNav);
+        console.log(subNav);
     };
 
     return (
@@ -13,7 +15,7 @@ const SubMenu = ({ item }) => {
                 <i className="first-icon">{item.icon}</i>
                 <span>{item.title}</span>
                 <i className="last-icon">
-                    {item.subNav && subNav ? item.iconOpened : item.subNav ? item.iconClosed : null}
+                    {subNav ? item.iconOpened : item.subNav ? item.iconClosed : null}
                 </i>
             </Link>
             {item.subNav ? (

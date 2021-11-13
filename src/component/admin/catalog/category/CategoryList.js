@@ -59,6 +59,7 @@ const CategoryList = () => {
                                     type="text"
                                     placeholder="Tìm kiếm theo tên danh mục..."
                                 />
+                                <div className="btn">Áp dụng</div>
                             </div>
                         </form>
                     </div>
