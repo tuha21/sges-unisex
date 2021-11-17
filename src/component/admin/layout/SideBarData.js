@@ -10,93 +10,112 @@ import * as VscIcons from "react-icons/vsc";
 
 export const SideBarData = [
     {
-        title: "Dashboard",
+        title: "Tổng quan",
         path: "/admin/dashboard",
         icon: <AiIcons.AiOutlineDashboard />,
     },
     {
-        title: "Catalog",
-        path: "/admin/catalog",
+        title: "Báo cáo",
+        path: "#",
         icon: <SiIcons.SiDatabricks />,
         iconClosed: <FiIcons.FiChevronLeft />,
         iconOpened: <FiIcons.FiChevronDown />,
         subNav: [
             {
-                title: "Products List",
-                path: "/admin/productslist",
+                title: "Báo cáo doanh thu",
+                path: "/admin/reports-revenue",
             },
             {
-                title: "Product",
-                path: "/admin/product",
+                title: "Báo cáo mặt hàng",
+                path: "/admin/reports-products",
             },
             {
-                title: "Categories List",
-                path: "/admin/categorieslist",
+                title: "Báo cáo kho hàng",
+                path: "/admin/reports-inventory",
             },
             {
-                title: "Category",
-                path: "/admin/category",
+                title: "Báo cáo mặt hàng",
+                path: "/admin/reports-products",
             },
         ],
     },
     {
-        title: "Customeres",
-        path: "/admin/customers",
+        title: "Hóa đơn",
+        path: "/admin/orders",
+        icon: <AiIcons.AiOutlineShoppingCart />,
+        iconClosed: <FiIcons.FiChevronLeft />,
+        iconOpened: <FiIcons.FiChevronDown />,
+    },
+    {
+        title: "Sản phẩm",
+        path: "#",
+        icon: <SiIcons.SiDatabricks />,
+        iconClosed: <FiIcons.FiChevronLeft />,
+        iconOpened: <FiIcons.FiChevronDown />,
+        subNav: [
+            {
+                title: "Danh sách sản phẩm",
+                path: "/admin/productslist",
+            },
+            {
+                title: "Danh mục",
+                path: "/admin/categorieslist",
+            },
+            {
+                title: "Combo",
+                path: "/admin/combos",
+            },
+        ],
+    },
+    {
+        title: "Nhân viên",
+        path: "#",
+        icon: <SiIcons.SiDatabricks />,
+        iconClosed: <FiIcons.FiChevronLeft />,
+        iconOpened: <FiIcons.FiChevronDown />,
+        subNav: [
+            {
+                title: "Danh sách nhân viên",
+                path: "/admin/staffs",
+            },
+            {
+                title: "Vai trò nhân viên",
+                path: "/admin/role",
+            },
+        ],
+    },
+    {
+        title: "Khách hàng",
+        path: "#",
         icon: <FiIcons.FiUsers />,
         iconClosed: <FiIcons.FiChevronLeft />,
         iconOpened: <FiIcons.FiChevronDown />,
         subNav: [
             {
-                title: "Customers List",
+                title: "Danh sách khách hàng",
                 path: "/admin/customerslist",
             },
             {
-                title: "Customer",
-                path: "/admin/customer",
+                title: "Nhóm khách hàng",
+                path: "/admin/customersgroup",
             },
         ],
     },
+
     {
-        title: "Orders",
-        path: "/admin/orders",
-        icon: <AiIcons.AiOutlineShoppingCart />,
-        iconClosed: <FiIcons.FiChevronLeft />,
-        iconOpened: <FiIcons.FiChevronDown />,
-        subNav: [
-            {
-                title: "Orders List",
-                path: "/admin/orderslist",
-            },
-            {
-                title: "Order Detail",
-                path: "/admin/order",
-            },
-        ],
-    },
-    {
-        title: "Events",
+        title: "Khuyến mại",
         path: "/admin/events",
-        icon: <BsIcons.BsCalendarEvent />,
+        icon: <RiIcons.RiCoupon3Line />,
         iconClosed: <FiIcons.FiChevronLeft />,
         iconOpened: <FiIcons.FiChevronDown />,
-        subNav: [
-            {
-                title: "Events List",
-                path: "/admin/eventslist",
-            },
-            {
-                title: "event",
-                path: "/admin/event",
-            },
-        ],
     },
     {
-        title: "Inbox",
+        title: "Trò chuyện",
         path: "/admin/inbox",
         icon: <AiIcons.AiOutlineMail />,
     },
     {
-        title: "Feedback",
+        title: "Phản hồi",
         path: "/admin/feedback",
         icon: <VscIcons.VscFeedback />,
     },

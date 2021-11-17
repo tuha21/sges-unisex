@@ -7,6 +7,9 @@ import CategoryList from "./catalog/category/CategoryList";
 import Category from "./catalog/category/Category";
 import ProductList from "./catalog/product/ProductList";
 import Product from "./catalog/product/Product";
+import Combos from "./catalog/combo/Combos";
+import Combo from "./catalog/combo/Combo";
+import Orders from "./order/Orders";
 
 const AdminPage = () => {
     return (
@@ -14,6 +17,9 @@ const AdminPage = () => {
             <SideBar />
             <TopBar />
             <div className="content">
+                <Route path="/admin/orders">
+                    <Orders />
+                </Route>
                 <Route path="/admin/productslist">
                     <ProductList />
                 </Route>
@@ -25,6 +31,12 @@ const AdminPage = () => {
                 </Route>
                 <Route path="/admin/category">
                     <Category />
+                </Route>
+                <Route path="/admin/combos">
+                    <Combos />
+                </Route>
+                <Route path="/admin/combo">
+                    <Combo />
                 </Route>
             </div>
         </div>

@@ -16,7 +16,7 @@ const ProductList = () => {
                             <nav className="mb-2" aria-label="breadcrumb">
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item">
-                                        <a href="/admin">Admin</a>
+                                        <Link to="/admin">Admin</Link>
                                     </li>
                                     <li className="breadcrumb-item active" aria-current="page">
                                         Products

@@ -11,7 +11,7 @@ const SubMenu = ({ item }) => {
 
     return (
         <li>
-            <Link className="link" to="#" onClick={item.subNav && showSubNav}>
+            <Link className="link" to={item.path} onClick={item.subNav && showSubNav}>
                 <i className="first-icon">{item.icon}</i>
                 <span>{item.title}</span>
                 <i className="last-icon">
