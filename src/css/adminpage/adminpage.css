@@ -269,7 +269,6 @@
 .admin-combo {
   width: 100%;
   padding-bottom: 50px;
-  width: 100%;
 }
 
 .admin-combo .container .py-5 {
@@ -349,6 +348,57 @@
 }
 
 .admin-order {
+  width: 100%;
+}
+
+.admin-order .tim-kiem form {
+  border: 1px solid #d9d9d9;
+}
+
+.admin-order .tim-kiem form .form-group {
+  position: relative;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-order .tim-kiem form .form-group i {
+  position: absolute;
+  background-color: #068cc1;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  border-radius: 5px 0 0 5px;
+}
+
+.admin-order .tim-kiem form .form-group input {
+  line-height: 40px;
+  height: 40px;
+  width: 100%;
+  padding-left: 65px;
+  border: none;
+  background-color: #e6e8eb;
+  border-radius: 5px;
+}
+
+.admin-order .tim-kiem form .form-group .btn {
+  position: absolute;
+  background-color: #068cc1;
+  right: 0;
+  color: #fff;
+  height: 40px;
+}
+
+.admin-staff {
+  width: 100%;
+}
+
+.admin-roles {
   width: 100%;
 }
 /*# sourceMappingURL=adminpage.css.map */

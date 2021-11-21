@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import * as CgIcons from "react-icons/cg";
+import Paginate from "../../paginate/Paginate";
 
 const Combo = () => {
     return (
@@ -14,14 +16,14 @@ const Combo = () => {
                                         <Link to="/admin">Admin</Link>
                                     </li>
                                     <li class="breadcrumb-item" aria-current="page">
-                                        <Link to="/admin/categorieslist">Categories</Link>
+                                        <Link to="/admin/comboslist">Combos</Link>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">
-                                        Categories
+                                        Combo
                                     </li>
                                 </ol>
                             </nav>
-                            <h3 className="m-0">Category</h3>
+                            <h3 className="m-0">Combo</h3>
                         </div>
                         <div className="col-auto d-flex">
                             <Link className="btn btn-xoa" to="/admin/category">
@@ -34,141 +36,146 @@ const Combo = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-sm-8">
+                    <div className="col-12">
                         <div className="card">
                             <div className="p-3">
-                                <h5>Thông tin danh mục</h5>
-                                <form>
+                                <form className="pb-4">
                                     <div className="form-group">
-                                        <label htmlFor="code">Mã danh mục</label>
-                                        <input
-                                            className="form-control"
-                                            type="text"
-                                            id="code"
-                                            name="code"
-                                            value={""}
-                                            placeholder="VD: C0123"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="name">Tên danh mục</label>
+                                        <label htmlFor="name">
+                                            <h4>Tên combo</h4>
+                                        </label>
                                         <input
                                             className="form-control"
                                             type="text"
                                             id="name"
                                             name="name"
                                             value={""}
-                                            placeholder="VD: Street Style Pants"
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="des">Mô tả</label>
-                                        <input
-                                            className="form-control"
-                                            type="text"
-                                            id="des"
-                                            name="des"
-                                            value={""}
-                                            placeholder="VD: Street Style Pants"
+                                            placeholder="VD: Streer new feed"
                                         />
                                     </div>
                                 </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-sm-4">
-                        <div className="card">
-                            <div className="p-3">
-                                <h3></h3>
-                                <table className="table">
-                                    <div class="form-group">
-                                        <label for="supcate">Parent category</label>
-                                        <select class="form-control" id="supcate">
-                                            <option>Áo</option>
-                                            <option>Quần</option>
-                                            <option>Phụ kiện</option>
-                                        </select>
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="created">Ngày tạo</label>
-                                        <input
-                                            className="form-control"
-                                            type="date"
-                                            id="created"
-                                            name="created"
-                                            value={""}
-                                        />
-                                    </div>
-                                    <div className="form-group">
-                                        <label htmlFor="lastUpdate">Ngày sửa cuối</label>
-                                        <input
-                                            className="form-control"
-                                            type="date"
-                                            id="lastUpdate"
-                                            name="lastUpdate"
-                                            value={""}
-                                        />
-                                    </div>
+                                <h4>Mặt hàng</h4>
+                                <table className="table table-striped">
+                                    <thead style={{ fontWeight: "bold" }}>
+                                        <tr>
+                                            <td style={{ paddingLeft: "20px" }}>HÌnh ảnh</td>
+                                            <td>Tên mặt hàng</td>
+                                            <td>Giá</td>
+                                            <td width="20px"></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Hinh ảnh 1</td>
+                                            <td>Sản phẩm 1</td>
+                                            <td>100000</td>
+                                            <td>
+                                                <div className="btn">
+                                                    <CgIcons.CgClose />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hinh ảnh 1</td>
+                                            <td>Sản phẩm 1</td>
+                                            <td>100000</td>
+                                            <td>
+                                                <div className="btn">
+                                                    <CgIcons.CgClose />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hinh ảnh 1</td>
+                                            <td>Sản phẩm 1</td>
+                                            <td>100000</td>
+                                            <td>
+                                                <div className="btn">
+                                                    <CgIcons.CgClose />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colSpan="2" className="px-5">
+                                                <h5>Tổng số</h5>
+                                            </td>
+                                            <td colSpan="2">
+                                                <h4 className="text-end px-5">3</h4>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colSpan="2" className="px-5">
+                                                <h5>Tổng tiền</h5>
+                                            </td>
+                                            <td colSpan="2">
+                                                <h5 className="text-end px-5">300000</h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colSpan="2" className="px-5">
+                                                <h5>Giá bán</h5>
+                                            </td>
+                                            <td colSpan="2">
+                                                <h5 className="text-end px-5">200000</h5>
+                                            </td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="row p-2">
-                    <div className="col"></div>
-                    <div className="card">
-                        <div className="tbl-sanpham py-5">
-                            <h5>Sản phẩm thuộc danh mục</h5>
-                            <table className="table table-striped">
-                                <thead>
-                                    <th style={{ width: "20%", paddingLeft: "20px" }}>Image</th>
-                                    <th style={{ width: "20%", paddingLeft: "20px" }}>Code</th>
-                                    <th style={{ paddingLeft: "20px" }}>Name</th>
-                                    <th style={{ width: "10%", paddingLeft: "20px" }}>Option</th>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Image</td>
-                                        <td>P0101</td>
-                                        <td>Ao khoac Sges</td>
-                                        <td>
-                                            <Link className="btn" to="#">
-                                                Edit
-                                            </Link>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Image</td>
-                                        <td>P0101</td>
-                                        <td>Ao khoac Sges</td>
-                                        <td>
-                                            <Link className="btn" to="#">
-                                                Edit
-                                            </Link>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Image</td>
-                                        <td>P0101</td>
-                                        <td>Ao khoac Sges</td>
-                                        <td>
-                                            <Link className="btn" to="#">
-                                                Edit
-                                            </Link>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Image</td>
-                                        <td>P0101</td>
-                                        <td>Ao khoac Sges</td>
-                                        <td>
-                                            <Link className="btn" to="#">
-                                                Edit
-                                            </Link>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <div className="row py-5">
+                    <div className="col-12">
+                        <div className="card">
+                            <div className="p-3">
+                                <div className="tbl-sanpham py-5">
+                                    <h4 className="pb-4">Danh sách sản phẩm</h4>
+                                    <table className="table table-striped">
+                                        <thead>
+                                            <th style={{ paddingLeft: "20px" }}>Image</th>
+                                            <th style={{ paddingLeft: "20px" }}>Tên</th>
+                                            <th style={{ paddingLeft: "20px" }}>Giá</th>
+                                            <th style={{ width: "200px", paddingLeft: "20px" }}>
+                                                option
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Image</td>
+                                                <td>Ao khoac Sges</td>
+                                                <td>100000</td>
+                                                <td>
+                                                    <Link className="btn" to="#">
+                                                        Thêm vào combo
+                                                    </Link>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Image</td>
+                                                <td>Ao khoac Sges</td>
+                                                <td>100000</td>
+                                                <td>
+                                                    <Link className="btn" to="#">
+                                                        Thêm vào combo
+                                                    </Link>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Image</td>
+                                                <td>Ao khoac Sges</td>
+                                                <td>100000</td>
+                                                <td>
+                                                    <Link className="btn" to="#">
+                                                        Thêm vào combo
+                                                    </Link>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <Paginate />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

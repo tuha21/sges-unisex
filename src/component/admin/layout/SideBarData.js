@@ -70,7 +70,7 @@ export const SideBarData = [
     {
         title: "Nhân viên",
         path: "#",
-        icon: <SiIcons.SiDatabricks />,
+        icon: <BsIcons.BsFillPersonLinesFill />,
         iconClosed: <FiIcons.FiChevronLeft />,
         iconOpened: <FiIcons.FiChevronDown />,
         subNav: [

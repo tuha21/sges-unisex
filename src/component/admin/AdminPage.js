@@ -10,6 +10,9 @@ import Product from "./catalog/product/Product";
 import Combos from "./catalog/combo/Combos";
 import Combo from "./catalog/combo/Combo";
 import Orders from "./order/Orders";
+import Staffs from "./staff/Staffs";
+import Staff from "./staff/Staff";
+import Roles from "./staff/Roles";
 
 const AdminPage = () => {
     return (
@@ -37,6 +40,15 @@ const AdminPage = () => {
                 </Route>
                 <Route path="/admin/combo">
                     <Combo />
+                </Route>
+                <Route path="/admin/staffs">
+                    <Staffs />
+                </Route>
+                <Route path="/admin/staff">
+                    <Staff />
+                </Route>
+                <Route path="/admin/role">
+                    <Roles />
                 </Route>
             </div>
         </div>
