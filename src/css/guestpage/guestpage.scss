@@ -78,11 +78,6 @@
         }
     }
 }
-
-.home {
-    
-}
-
 .category {
     padding-top: 50px;
 
@@ -375,10 +370,15 @@
     }
 
     button {
-        background-color: #84746b;
+        background-color: #B5BDBD;
         border: none;
         border-radius: 0px;
         padding: 10px;
+        &:hover {
+            background-color: #FFFFFF;
+            color: black;
+            border: 1px solid black;
+        }
     }
 
     form {
@@ -434,10 +434,16 @@
     }
 
     .apply-voucher {
-        background-color: #b2b2ad;
-        border: 1px solid #b2b2ad;
+        background-color: #B5BDBD;
+        border: 1px solid #B5BDBD;
+        color: #FFFFFF;
         border-radius: 0px;
         padding: 10px;
+        &:hover {
+            background-color: #fff;
+            border: 1px solid black;
+            color: black;
+        }
     }
 
     .cart-total {
@@ -448,6 +454,19 @@
             width: 100%;
             padding: 10px;
             border: none;
+        }
+    }
+
+    .check-out-btn {
+        background-color: #B5BDBD;
+        border: 1px solid #B5BDBD;
+        color: #FFFFFF;
+        border-radius: 0px;
+        padding: 10px;
+        &:hover {
+            background-color: #fff;
+            border: 1px solid black;
+            color: black;
         }
     }
 }

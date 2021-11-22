@@ -1,8 +1,12 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-export default class TopMenu extends Component {
+class TopMenu extends Component {
     render() {
+
+        const {cart} = this.props
+
         return (
             <div className="top-menu">
                 <div className="container">
@@ -15,17 +19,17 @@ export default class TopMenu extends Component {
                                 <ul className="menu">
                                     <li>
                                         <Link className="menu-item" to="/sges">
-                                            Home
+                                            Trang chủ
                                         </Link>
                                     </li>
                                     <li>
                                         <Link className="menu-item" to="/sges/shop">
-                                            Shop
+                                            Cửa hàng
                                         </Link>
-                                    </li>
+                                    </li>   
                                     <li>
-                                        <Link className="menu-item" to="/sges/feature">
-                                            Feature
+                                        <Link className="menu-item" to="/sges/combo">
+                                            Combo
                                         </Link>
                                     </li>
                                 </ul>
@@ -34,15 +38,16 @@ export default class TopMenu extends Component {
                         <div className="col-lg-5">
                             <div className="right-menu text-end">
                                 <span>
-                                    <i class="bi bi-search"></i>
+                                    <i className="bi bi-search"></i>
                                 </span>
                                 <span>
                                     <Link to="/sges/cart">
-                                        <i class="bi bi-cart-fill"></i>
+                                        <i className="bi bi-cart-fill"></i>
+                                        <span className="cart-count">{cart.length}</span>
                                     </Link>
                                 </span>
                                 <span>
-                                    <i class="bi bi-heart"></i>
+                                    <i className="bi bi-heart"></i>
                                 </span>
                             </div>
                         </div>
@@ -52,3 +57,11 @@ export default class TopMenu extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        cart: state.cart
+    }
+}
+
+export default connect(mapStateToProps, null)(TopMenu)

@@ -9,7 +9,7 @@ export default class TopBar extends Component {
                     <div className="row">
                         <div className="col-lg-8">
                             <div className="left-top-bar">
-                                Free shipping for standard order over $100
+                                Giao hàng miễn phí cho đơn đặt hàng trên 350k
                             </div>
                         </div>
                         <div className="col-lg-4">
@@ -19,13 +19,13 @@ export default class TopBar extends Component {
                                         <a href="#">Help & FAGs</a>
                                     </div>
                                     <div className="col-lg-3 top-bar-right-item">
-                                        <Link to="/sges/login">Login</Link>
+                                        <Link to="/sges/login">Đăng nhập</Link>
                                     </div>
                                     <div className="col-lg-3 top-bar-right-item">
-                                        <a href="#">Contact</a>
+                                        <a href="#">Liên hệ</a>
                                     </div>
                                     <div className="col-lg-3 top-bar-right-item">
-                                        <a href="#">About</a>
+                                        <a href="#">Giới thiệu</a>
                                     </div>
                                 </div>
                             </div>

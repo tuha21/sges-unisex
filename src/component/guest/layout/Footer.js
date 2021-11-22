@@ -28,8 +28,8 @@ export default class Footer extends Component {
                                 <li><a href="#">Shirt</a></li>
                                 <li><a href="#">Pant</a></li>
                                 <li>
-                                    <a href="#" className="me-2"><i class="bi bi-facebook"></i></a>
-                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#" className="me-2"><i className="bi bi-facebook"></i></a>
+                                    <a href="#"><i className="bi bi-instagram"></i></a>
                                 </li>
                                 
                             </ul>

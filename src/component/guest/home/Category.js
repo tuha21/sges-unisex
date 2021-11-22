@@ -12,7 +12,7 @@ export default class Category extends Component {
                                 this.props.findBySubCate(1)
                             }}>
                                 <p>Pant</p>
-                                <img src="https://cf.shopee.vn/file/76a8f82d99aac00dfb9851877698e792" />
+                                <img src="https://cf.shopee.vn/file/76a8f82d99aac00dfb9851877698e792" alt="jsx-a11y/img-redundant-alt" />
                             </div>
                         </div>
                         <div className="col-lg-4">
@@ -20,7 +20,7 @@ export default class Category extends Component {
                                 this.props.findBySubCate(2)
                             }}>
                                 <p>Shirt</p>
-                                <img src="https://cf.shopee.vn/file/76a8f82d99aac00dfb9851877698e792" />
+                                <img src="https://cf.shopee.vn/file/76a8f82d99aac00dfb9851877698e792" alt="jsx-a11y/img-redundant-alt" />
                             </div>
                         </div>
                         <div className="col-lg-4">
@@ -28,7 +28,7 @@ export default class Category extends Component {
                                 this.props.findBySubCate(3)
                             }}>
                                 <p>Accessories</p>
-                                <img src="https://cf.shopee.vn/file/76a8f82d99aac00dfb9851877698e792" />
+                                <img src="https://cf.shopee.vn/file/76a8f82d99aac00dfb9851877698e792" alt="jsx-a11y/img-redundant-alt" />
                             </div>
                         </div>
                     </div>

@@ -42,7 +42,7 @@ export default class ProductOverView extends Component {
         return (
             <div className="product-overview p-5">
                 <div className="container">
-                    <h2 className='text-center'>SẢN PHẨM GIẢM GIÁ</h2>
+                    <h2 style={{color: '#F36444'}} className='text-center'>SẢN PHẨM GIẢM GIÁ</h2>
                 </div>
                 <div className="product-list">
                     <div className="container">
@@ -53,7 +53,7 @@ export default class ProductOverView extends Component {
                 </div>
 
                 <div className="container">
-                    <h2 className='text-center'>SẢN PHẨM NỔI BẬT</h2>
+                    <h2 style={{color: '#F36444'}} className='text-center'>SẢN PHẨM NỔI BẬT</h2>
                 </div>
                 <div className="product-list">
                     <div className="container">

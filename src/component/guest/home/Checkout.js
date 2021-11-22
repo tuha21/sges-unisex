@@ -117,7 +117,7 @@ class Checkout extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
+                    {/* <div className="col-6">
                         <table className="table table-bordered">
                             <tbody>
                                 <tr>
@@ -135,7 +135,7 @@ class Checkout extends Component {
                                 <CartItem />
                             </tbody>
                         </table>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

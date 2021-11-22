@@ -8,6 +8,7 @@ import ProductInfo from "./productInfo/ProductInfo";
 import Login from "./login/Login";
 import Checkout from "./home/Checkout";
 import Shop from "./shop/Shop";
+import Combo from "./home/Combo";
 
 export default class Sges extends Component {
     render() {
@@ -29,6 +30,9 @@ export default class Sges extends Component {
                     </Route>
                     <Route path="/sges/checkout">
                         <Checkout />
+                    </Route>
+                    <Route path="/sges/combo">
+                        <Combo />
                     </Route>
                     <Route path="/sges/shop">
                         <Shop />

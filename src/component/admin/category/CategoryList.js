@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // import CategoryItem from "./CategoryItem";
 // import Paginate from "./Paginate";
 import { Link } from "react-router-dom";

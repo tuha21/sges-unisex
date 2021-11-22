@@ -20,7 +20,7 @@ const init = {
 
 const reducer = (state = init, action) => {
     switch(action.type) {
-        case 'set' : {
+        case 'set_product_info' : {
             return action.product
         }
         default: return state

@@ -17,12 +17,12 @@ class ProductItem extends Component {
                     <button>Quick View</button>
                 </div>
                 <div className="product-info pt-2">
-                    <Link className="product-name" to="/sges/product-detail">
+                    <Link onClick={this.setProductInfo} className="product-name" to="/sges/product-detail">
                         {productItem.name}
                     </Link>
                     <div className="row">
                         <div className="col-lg-10">
-                            <p className="product-price">${productItem.price}</p>
+                            <p className="product-price">{productItem.price} đ</p>
                         </div>
                         <div className="col-lg-2">
                             <p className="product-price text-end">
@@ -40,7 +40,7 @@ const mapStateToDispatch = (dispatch) => {
     return {
         setProductInfo: (product) => {
             dispatch({
-                type: "set",
+                type: "set_product_info",
                 product,
             });
         },
