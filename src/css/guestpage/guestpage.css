@@ -468,7 +468,6 @@
   border: none;
 }
 
-<<<<<<< HEAD
 .cart .check-out-btn {
   background-color: #B5BDBD;
   border: 1px solid #B5BDBD;
@@ -481,11 +480,11 @@
   background-color: #fff;
   border: 1px solid black;
   color: black;
-=======
-.cart .col-lg-8,
-.cart .col-lg-4 {
+}
+
+.cart .check-out-btn .col-lg-8,
+.cart .check-out-btn .col-lg-4 {
   background-color: #fff;
->>>>>>> a1d460af2904e5104b07b19aee47546ef86410f5
 }
 
 .login-page {

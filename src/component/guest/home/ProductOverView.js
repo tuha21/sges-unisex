@@ -35,7 +35,11 @@ export default class ProductOverView extends Component {
 
     render() {
 
-        const element = this.state.saleList.map((val, ind) => {
+        const sales = this.state.saleList.map((val, ind) => {
+            return <div className="col-lg-3" key={ind}><ProductItem  productItem={val}/></div>
+        })
+
+        const topview = this.state.saleList.map((val, ind) => {
             return <div className="col-lg-3" key={ind}><ProductItem  productItem={val}/></div>
         })
 
@@ -47,7 +51,7 @@ export default class ProductOverView extends Component {
                 <div className="product-list">
                     <div className="container">
                         <div className="row">
-                            {element}
+                            {sales}
                         </div>
                     </div>
                 </div>
@@ -58,7 +62,7 @@ export default class ProductOverView extends Component {
                 <div className="product-list">
                     <div className="container">
                         <div className="row">
-                            {element}
+                            {topview}
                         </div>
                     </div>
                 </div>

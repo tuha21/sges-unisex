@@ -79,10 +79,7 @@
         }
     }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> a1d460af2904e5104b07b19aee47546ef86410f5
 .category {
     padding-top: 50px;
 
@@ -379,6 +376,7 @@
         border: none;
         border-radius: 0px;
         padding: 10px;
+
         &:hover {
             background-color: #FFFFFF;
             color: black;
@@ -387,6 +385,7 @@
     }
 
     form {
+
         input,
         select {
             border-radius: 0px;
@@ -443,6 +442,7 @@
         color: #FFFFFF;
         border-radius: 0px;
         padding: 10px;
+
         &:hover {
             background-color: #fff;
             border: 1px solid black;
@@ -460,7 +460,6 @@
             border: none;
         }
     }
-<<<<<<< HEAD
 
     .check-out-btn {
         background-color: #B5BDBD;
@@ -468,16 +467,17 @@
         color: #FFFFFF;
         border-radius: 0px;
         padding: 10px;
+
         &:hover {
             background-color: #fff;
             border: 1px solid black;
             color: black;
         }
-=======
-    .col-lg-8,
-    .col-lg-4 {
-        background-color: #fff;
->>>>>>> a1d460af2904e5104b07b19aee47546ef86410f5
+
+        .col-lg-8,
+        .col-lg-4 {
+            background-color: #fff;
+        }
     }
 }
 
