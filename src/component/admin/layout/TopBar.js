@@ -3,7 +3,7 @@ import "../../../css/topbar/topbar.css";
 
 const TopBar = () => {
     return (
-        <div className="top-bar">
+        <div className="top-bar-admin">
             <div className="row">
                 <div className="col-lg-6 d-flex">
                     <div className="search-group">

@@ -1,12 +1,361 @@
 .main {
-    // display: flex;
+    background-color: #f5f7fa;
 }
-
 .content {
-    background-color: aqua;
     display: flex;
     justify-content: center;
     position: relative;
     margin-left: 240px;
-    // width: 100%;
+}
+
+.breadcrumb {
+    a {
+        color: #828f99;
+    }
+}
+
+.admin-category {
+    width: 100%;
+    .container {
+        .py-5 {
+            padding: 1.5rem 0 !important;
+            a {
+                color: #828f99;
+            }
+            .col-auto {
+                .btn {
+                    margin-left: 10px;
+                    color: #fff;
+                    background-color: #068cc1;
+                }
+                .btn-xoa {
+                    color: #08283d;
+                    background-color: #e6e8eb;
+                }
+            }
+            .row {
+                margin-top: -16px;
+            }
+        }
+        .card {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            .form-group {
+                padding: 10px 0;
+                border: none;
+                label {
+                    padding-bottom: 6px;
+                }
+            }
+            .p-4 {
+                .form-group {
+                    position: relative;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    i {
+                        position: absolute;
+                        background-color: #068cc1;
+                        color: #fff;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 20px;
+                        border-radius: 5px 0 0 5px;
+                    }
+                    input {
+                        line-height: 40px;
+                        height: 40px;
+                        width: 100%;
+                        padding-left: 65px;
+                        border: none;
+                        background-color: #e6e8eb;
+                        border-radius: 5px;
+                    }
+                    .btn {
+                        position: absolute;
+                        background-color: #068cc1;
+                        right: 0;
+                        color: #fff;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    padding: 24px;
+    .pageSize {
+        padding: 5px;
+        margin-right: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: aliceblue;
+    }
+    .pageNumber {
+        button {
+            margin: 0 2px;
+            border-radius: 5px;
+            padding: 2px 15px;
+            border: none;
+        }
+        .btn-control {
+            color: aliceblue;
+            background-color: #068cc1;
+        }
+    }
+}
+
+.admin-product {
+    width: 100%;
+    padding-bottom: 50px;
+    .admin-product-content {
+        padding: 0 64px;
+        .product-detail {
+            form {
+                .form-group {
+                    label {
+                        padding: 20px 0 10px 0;
+                        font-size: medium;
+                    }
+                    input {
+                        height: 40px;
+                        line-height: 40px;
+                        border-radius: 5px;
+                    }
+                    a {
+                        margin: 5px auto;
+                        text-align: center;
+                        background-color: #fff;
+                        color: #068cc1;
+                        border: 1px #068cc1 dashed;
+                    }
+                }
+                .category-select,
+                .combo-select {
+                    select {
+                        left: 0;
+                        height: 40px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .card {
+        font-size: 14px;
+        font-weight: 500;
+        .filter {
+            border-bottom: 1px solid #d9d9d9;
+            margin: 0;
+            padding: 16px;
+        }
+        .filter-by {
+            width: 100%;
+            padding: 10px;
+        }
+        form {
+            font-weight: 400;
+            input {
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+        .filter-btn .btn {
+            background-color: #068cc1;
+            color: #fff;
+        }
+        .table {
+            line-height: 40px;
+            .th-sort {
+                &:hover {
+                    background-color: #f0f2f5;
+                }
+                .btn {
+                    width: 100%;
+                    span {
+                        left: 0;
+                        font-weight: 500;
+                    }
+                    .sort {
+                        display: grid;
+                        svg {
+                            height: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .p-4 {
+        .btn {
+            margin-left: 10px;
+            color: #fff;
+            background-color: #068cc1;
+        }
+    }
+    .card {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .col-10 {
+        .card {
+            .p-2 {
+                form {
+                    border: 1px solid #d9d9d9;
+                    .form-group {
+                        position: relative;
+                        height: 40px;
+                        display: flex;
+                        align-items: center;
+                        i {
+                            position: absolute;
+                            background-color: #068cc1;
+                            color: #fff;
+                            height: 40px;
+                            line-height: 40px;
+                            padding: 0 20px;
+                            border-radius: 5px 0 0 5px;
+                        }
+                        input {
+                            line-height: 40px;
+                            height: 40px;
+                            width: 100%;
+                            padding-left: 65px;
+                            border: none;
+                            background-color: #e6e8eb;
+                            border-radius: 5px;
+                        }
+                        .btn {
+                            position: absolute;
+                            background-color: #068cc1;
+                            right: 0;
+                            color: #fff;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.admin-combo {
+    width: 100%;
+    padding-bottom: 50px;
+    .container {
+        .py-5 {
+            padding: 1.5rem 0 !important;
+            a {
+                color: #828f99;
+            }
+            .col-auto {
+                .btn {
+                    margin-left: 10px;
+                    color: #fff;
+                    background-color: #068cc1;
+                }
+                .btn-xoa {
+                    color: #08283d;
+                    background-color: #e6e8eb;
+                }
+            }
+            .row {
+                margin-top: -16px;
+            }
+        }
+        .card {
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            .form-group {
+                padding: 10px 0;
+                border: none;
+                label {
+                    padding-bottom: 6px;
+                }
+            }
+            .p-4 {
+                .form-group {
+                    position: relative;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    i {
+                        position: absolute;
+                        background-color: #068cc1;
+                        color: #fff;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 20px;
+                        border-radius: 5px 0 0 5px;
+                    }
+                    input {
+                        line-height: 40px;
+                        height: 40px;
+                        width: 100%;
+                        padding-left: 65px;
+                        border: none;
+                        background-color: #e6e8eb;
+                        border-radius: 5px;
+                    }
+                    .btn {
+                        position: absolute;
+                        background-color: #068cc1;
+                        right: 0;
+                        color: #fff;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.admin-order {
+    width: 100%;
+    // padding-bottom: 50px;
+    .tim-kiem {
+        form {
+            border: 1px solid #d9d9d9;
+            .form-group {
+                position: relative;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                i {
+                    position: absolute;
+                    background-color: #068cc1;
+                    color: #fff;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 20px;
+                    border-radius: 5px 0 0 5px;
+                }
+                input {
+                    line-height: 40px;
+                    height: 40px;
+                    width: 100%;
+                    padding-left: 65px;
+                    border: none;
+                    background-color: #e6e8eb;
+                    border-radius: 5px;
+                }
+                .btn {
+                    position: absolute;
+                    background-color: #068cc1;
+                    right: 0;
+                    color: #fff;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+.admin-staff {
+    width: 100%;
+}
+
+.admin-roles {
+    width: 100%;
 }
