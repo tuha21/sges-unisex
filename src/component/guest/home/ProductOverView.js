@@ -46,7 +46,12 @@ export default class ProductOverView extends Component {
         return (
             <div className="product-overview p-5">
                 <div className="container">
-                    <h2 style={{color: '#F36444'}} className='text-center'>SẢN PHẨM GIẢM GIÁ</h2>
+                <h2 
+                        style={{
+                            color: '#F36444',
+                            backgroundImage: "url('https://bizweb.dktcdn.net/100/350/547/themes/812519/assets/title-line.png?1635407163743')"
+                        }}
+                        className='text-center'><span className='ps-5 pe-5' style={{backgroundColor: 'white'}}>SẢN PHẨM GIẢM GIÁ</span></h2>
                 </div>
                 <div className="product-list">
                     <div className="container">
@@ -57,7 +62,12 @@ export default class ProductOverView extends Component {
                 </div>
 
                 <div className="container">
-                    <h2 style={{color: '#F36444'}} className='text-center'>SẢN PHẨM NỔI BẬT</h2>
+                    <h2 
+                        style={{
+                            color: '#F36444',
+                            backgroundImage: "url('https://bizweb.dktcdn.net/100/350/547/themes/812519/assets/title-line.png?1635407163743')"
+                        }}
+                        className='text-center'><span className='ps-5 pe-5' style={{backgroundColor: 'white'}}>SẢN PHẨM NỔI BẬT</span></h2>
                 </div>
                 <div className="product-list">
                     <div className="container">

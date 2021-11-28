@@ -16,7 +16,9 @@ export default class App extends Component {
                             <AdminPage />
                         </Route>
                     </Switch>
+                    
                 </Router>
+                
             </div>
         );
     }

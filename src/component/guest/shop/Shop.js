@@ -26,6 +26,11 @@ export default class Shop extends Component {
             .catch(error => console.log('error', error));
     }
 
+
+    componentDidMount = () => {
+        this.findBySubCate(2)
+    }
+
     render() {
 
         const element = this.state.productList.map((val, ind) => {
@@ -67,11 +72,6 @@ export default class Shop extends Component {
                             </div>
                         </div>
                     </div>
-                    <ul className="page">
-                        <li className="page__btn"><span className="material-icons">{'<'}</span></li>
-                        <li className="page__numbers">1</li>
-                        <li className="page__btn"><span className="material-icons">{'>'}</span></li>
-                    </ul>
                 </div>
             </div>
         )

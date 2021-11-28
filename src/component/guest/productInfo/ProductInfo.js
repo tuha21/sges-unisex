@@ -69,6 +69,7 @@ class ProductInfo extends Component {
             this.setState({
                 message: 'Đã thêm vào giỏ hàng'
             })
+            alert('Đã thêm vào giỏ hàng')
         }
     }
 

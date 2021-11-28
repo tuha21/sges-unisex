@@ -11,6 +11,12 @@ import Shop from "./shop/Shop";
 import Combo from "./home/Combo";
 
 export default class Sges extends Component {
+
+    topFunction = () => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
     render() {
         return (
             <div>
@@ -38,6 +44,7 @@ export default class Sges extends Component {
                         <Shop />
                     </Route>
                     <Footer />
+                    <button onClick={this.topFunction} id="myBtn" title="Go to top">Top</button>
                 </Router>
             </div>
         );

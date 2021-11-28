@@ -20,8 +20,6 @@ class Cart extends Component {
         })
     }
 
-    componentDidMount = () => { };
-
     total = () => {
         let total = 0;
         this.props.cart.forEach((element) => {
@@ -77,19 +75,6 @@ class Cart extends Component {
                                 </tbody>
                                 <tbody>
                                     {element}
-                                    <tr>
-                                        <td colSpan={5}>
-                                            <input
-                                                value={this.state.txtVoucher}
-                                                onChange={this.onChangeVoucher}
-                                                className="voucher-input"
-                                                placeholder="voucher"
-                                            />
-                                            <button onClick={this.useVoucher} className="ms-2 apply-voucher">
-                                                Apply voucher
-                                            </button>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>

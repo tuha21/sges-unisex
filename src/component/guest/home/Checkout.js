@@ -8,7 +8,10 @@ class Checkout extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            payment: false
+            payment: false,
+
+            txtVoucher: '',
+            discount: 0
         }
     }
 
@@ -23,18 +26,48 @@ class Checkout extends Component {
             payment: false
         })
     }
-    
-    total = (cart) => {
+
+    onChangeVoucher = (e) => {
+        const { value } = e.target
+        this.setState({
+            txtVoucher: value
+        })
+    }
+
+    total = () => {
         let total = 0;
-        cart.forEach(element => {
-           total = total + ((100 - element.sale) * element.price/100)* element.qty 
+        this.props.cart.forEach((element) => {
+            total = total + (((100 - element.sale) * element.price) / 100) * element.qty;
         });
-        return total
+        return total;
+    };
+
+    useVoucher = () => {
+        const total = this.total()
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("http://localhost:8080/voucher/getByCode/37680", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                console.log(JSON.parse(result).conditions);
+                if (JSON.parse(result).conditions < total) {
+                    this.setState({
+                        discount: (total / 100) * JSON.parse(result).discount
+                    })
+                    alert("Da su dung")
+                }
+
+            })
+            .catch(error => console.log('error', error));
     }
 
 
     render() {
         const totalPay = this.total(this.props.cart) + 30000
+        const hasItem = this.props.cart.length > 0
         return (
             <div className="container">
                 <div className="row">
@@ -112,30 +145,44 @@ class Checkout extends Component {
                                 <button className="btn btn-outline-dark me-3" onClick={this.paypalPay}>Ví điện tử</button>
                                 <button className="btn btn-outline-dark" onClick={this.paymentOnDelivery}>Thanh toán khi nhận hàng</button>
                                 <div className="mt-3">
-                                    {this.state.payment ? <Paypal totalPay={totalPay}/> : ""}
+                                    {this.state.payment ? <Paypal totalPay={totalPay} /> : ""}
                                 </div>
                             </div>
                         </div>
                     </div>
-                    {/* <div className="col-6">
-                        <table className="table table-bordered">
-                            <tbody>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th>Remove</th>
-                                </tr>
-                            </tbody>
-                            <tbody>
-                                <CartItem />
-                                <CartItem />
-                                <CartItem />
-                                <CartItem />
-                            </tbody>
-                        </table>
-                    </div> */}
+                    {
+                        hasItem ? <div className="col-lg-6">
+                            <div className="cart-total">
+                                <p>
+                                    <h5>CART TOTALS</h5>
+                                </p>
+                                <p>
+                                    <h6>Subtotal: {this.total()} đ</h6>
+                                </p>
+                                <p>
+                                    <h>Shipping: 30.000 đ</h>
+                                </p>
+                                {
+                                    this.state.discount > 0 ?
+                                        <p>
+                                            <h>Giam gia: {this.state.discount}đ</h>
+                                        </p> : ''
+                                }
+                                <input
+                                    value={this.state.txtVoucher}
+                                    onChange={this.onChangeVoucher}
+                                    className="voucher-input"
+                                    placeholder="voucher"
+                                />
+                                <button onClick={this.useVoucher} className="ms-2 apply-voucher">
+                                    Apply voucher
+                                </button>
+                                <p>
+                                    <h5>TOTAL: {this.total() + 30000 - this.state.discount} đ</h5>
+                                </p>
+                            </div>
+                        </div> : ''
+                    }
                 </div>
             </div>
         );
